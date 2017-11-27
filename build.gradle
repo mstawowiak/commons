@@ -1,7 +1,12 @@
+plugins {
+    id 'nebula.optional-base' version '3.0.3'
+}
+
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
+apply plugin: 'nebula.optional-base'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -20,6 +25,9 @@ configurations {
 }
 
 dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'ch.qos.logback:logback-classic:1.2.3', optional
+
     codeQualityConfig 'com.github.mstawowiak:code-quality:1.0.0-SNAPSHOT'
     testImplementation 'junit:junit:4.12'
 }
