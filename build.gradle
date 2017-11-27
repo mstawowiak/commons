@@ -28,7 +28,10 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.25'
     compile 'ch.qos.logback:logback-classic:1.2.3', optional
 
+    compile 'javax.enterprise:cdi-api:2.0'
+
     codeQualityConfig 'com.github.mstawowiak:code-quality:1.0.0-SNAPSHOT'
+    testCompile 'org.jboss.weld:weld-junit4:1.1.0.Final'
     testImplementation 'junit:junit:4.12'
 }
 
