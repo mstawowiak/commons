@@ -6,6 +6,7 @@ Table of Contents
 
 * [cdi](#cdi)
 * [logging](#logging)
+* [ssl](#ssl)
 
 cdi
 ============
@@ -48,3 +49,12 @@ Examples of usage (by JVM Options):
 -Dcom.github.mstawowiak.commons.logging.webservice.level=OFF
 -Dcom.github.mstawowiak.commons.logging.path=logs/
 ```
+
+ssl
+============
+ 
+* `SSLKeystore` - keystore which can be build from file or system properties
+* `SSLConfiguration` - SSL configuration from keystore and truststore. Provides builder to create SSLContext for TLS Certificate verification and Client Certificate authentication
+* `AliasSelectorKeyManager` - custom key manager which allows specify alias to be chosen by SSLSocketFactory
+* `NaiveHostnameVerifier` - a HostnameVerifier which always verifies a hostname as true
+* `NaiveTrustManager` - truststore manager which accepts all certificates
