@@ -1,3 +1,4 @@
 include 'logging'
 include 'cdi'
+include 'rest'
 include 'ssl'

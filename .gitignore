@@ -31,4 +31,7 @@ hs_err_pid*
 .idea
 *.iml
 
+# Merge files
+*.orig
+
 /.nb-gradle/
