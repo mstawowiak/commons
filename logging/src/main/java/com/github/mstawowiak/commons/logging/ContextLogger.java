@@ -6,10 +6,10 @@ import org.slf4j.Marker;
 /**
  * Logger for log messages with context on the beginning of message content.
  */
-@SuppressWarnings("PMD.GodClass")
+@SuppressWarnings({"PMD.GodClass", "PMD.ExcessivePublicCount", "PMD.TooManyMethods"})
 public class ContextLogger {
 
-    private final Logger logger;
+    private final Logger logger; //NOPMD - LoggerIsNotStaticFinal
 
     public ContextLogger(Logger logger) {
         this.logger = logger;

@@ -1,7 +1,9 @@
 package com.github.mstawowiak.commons.ssl;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -25,8 +27,8 @@ public final class SSLKeystore {
         try {
             KeyStore loadedKeyStore = KeyStore.getInstance(keyStoreType);
 
-            try (FileInputStream fis = new FileInputStream(path)) {
-                loadedKeyStore.load(fis, this.password);
+            try (InputStream is = Files.newInputStream(Paths.get(path))) {
+                loadedKeyStore.load(is, this.password);
             }
 
             this.keyStore = loadedKeyStore;
